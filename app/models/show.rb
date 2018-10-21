@@ -10,5 +10,7 @@ class Show < ActiveRecord::Base
     show = Show.order('rating DESC').limit(1)[0]
   end 
 
-  
+  def self.lowest_rating
+    show = Show.order(:rating).limit(1)[0]
+  end 
 end 
